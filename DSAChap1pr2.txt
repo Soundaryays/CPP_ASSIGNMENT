@@ -51,8 +51,17 @@ int isPrimeNumber(int n)
    }  
    return isPrime;
 }
+..................................................................................................
+PS D:\All_Workspace\Cpp_Workspace\datastructurealgorithm\Chapter2> g++ prime2.cpp -o prime2.exe
+PS D:\All_Workspace\Cpp_Workspace\datastructurealgorithm\Chapter2> ./prime2
+the prime numbers are:
+2   --->   1
+3   --->   2
+5   --->   3
+7   --->   4
+the total number of prime numbers are:4
 
-
+..................................................................................................
 //Solution 2 : Algorithm
 Step1:Start
 Step2:Declaring method isPrimeNumber(int);
