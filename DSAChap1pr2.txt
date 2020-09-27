@@ -1,0 +1,77 @@
+Q.
+Write an algorithm to generate the first 10 prime numbers. In addition, write a program to implement this algorithm.
+
+ 
+
+Hint 1: Declare a variable whose value can be initialized to 2 and incremented successively by 1. A divisibility test can be performed on each value of this variable to check whether it is a prime number.
+
+ 
+
+Hint 2: Declare another variable to keep track of the number of prime numbers generated. This variable can be initialized to 0. When a divisibility test confirms that it’s a prime number, the variable should be incremented by one.
+
+Hint 3:need not to accept value from user
+
+solution1:Program with output:
+
+#include <iostream>
+
+using namespace std;
+
+int isPrimeNumber(int);
+int cnt=0;
+int main()
+{
+   bool isPrime;
+    cout<<"the prime numbers are:"<<endl;
+   for(int n = 2; n <=10; n++) 
+{
+                        // isPrime will be true for prime numbers
+      isPrime = isPrimeNumber(n);
+      if(isPrime == true)
+      {
+        cnt++;    //keep track of count variable and it increase by one when the number is prime
+        cout<<n<<"   --->   "<<cnt<<endl;  
+      }
+   }
+   cout<<"the total number of prime numbers are:"<<cnt<<endl;
+   return 0;
+}
+
+// Function that checks whether n is prime or not
+int isPrimeNumber(int n)
+ {
+   bool isPrime = true;
+
+   for(int i = 2; i <= n/2; i++) {
+      if (n%i == 0) {
+         isPrime = false;
+       
+         //break;
+      }
+   }  
+   return isPrime;
+}
+
+
+//Solution 2 : Algorithm
+Step1:Start
+Step2:Declaring method isPrimeNumber(int);
+Step3:set the values 
+       a. bool isPrime;
+       b. int cnt=0;
+Step4:repeat the below steps until n is equal to 10
+Step5:declare a loop variable and check for isprimeNumber(n)
+Step6: to check isprimeNumber() go to step 8
+Step7:If the number is prime increment the count and print the       number as well as count.
+Step8:set bool isprime to true within isprimeNumber(int) method.
+Step9:declare a loop variable and a divisibility test can be       performed on each value of this variable to check whether          it is a prime number.
+Step10:Check for, if(n%i==0), if it returns zero then it is not a        prime number else if it returns 1 then it is a primenumber.
+Step11:Stop
+
+
+
+
+
+
+
+
